@@ -5,11 +5,9 @@ Home: https://github.com/googleapis/proto-plus-python.git
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/proto-plus-feedstock/blob/master/LICENSE.txt)
 
 Summary: Beautiful, Pythonic protocol buffers.
-
-
 
 Current build status
 ====================
