@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
   run:
     - protobuf >=3.12.0
-    - python
+    - python >=3.6
 
 test:
   imports:
