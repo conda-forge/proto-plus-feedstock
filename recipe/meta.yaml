@@ -1,5 +1,5 @@
 {% set name = "proto-plus" %}
-{% set version = "1.19.0" %}
+{% set version = "1.19.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/proto-plus-{{ version }}.tar.gz
-  sha256: ce6695ce804383ad6f392c4bb1874c323896290a1f656560de36416ba832d91e
+  sha256: ec5f4d99e81f7e504666a6ca2872b1dc3c510ac7f229b38d763e144a2ad10a52
 
 build:
   number: 0
