@@ -19,7 +19,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - protobuf >= 3.19.0,<4.0.0dev
+    - protobuf >=3.19.0,<4.0.0dev
     - python >=3.6
 
 test:
