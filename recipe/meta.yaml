@@ -12,15 +12,16 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
+    - setuptools
   run:
+    - python >=3.7
     - protobuf >=3.19.0,<6.0.0dev
-    - python >=3.6
 
 test:
   imports:
@@ -32,10 +33,12 @@ test:
     - pip
 
 about:
-  home: https://github.com/googleapis/proto-plus-python.git
+  home: https://github.com/googleapis/proto-plus-python
   summary: Beautiful, Pythonic protocol buffers.
   license: Apache-2.0
   license_file: LICENSE
+  dev_url: https://github.com/googleapis/proto-plus-python
+  doc_url: https://proto-plus-python.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
