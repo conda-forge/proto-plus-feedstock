@@ -3,11 +3,15 @@ About proto-plus-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/proto-plus-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/proto-plus-python.git
+Home: https://github.com/googleapis/proto-plus-python
 
 Package license: Apache-2.0
 
 Summary: Beautiful, Pythonic protocol buffers.
+
+Development: https://github.com/googleapis/proto-plus-python
+
+Documentation: https://proto-plus-python.readthedocs.io/en/latest/
 
 Current build status
 ====================
