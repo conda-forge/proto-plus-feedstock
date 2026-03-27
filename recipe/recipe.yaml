@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  name: proto-plus
+  version: "1.27.2"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: b2adde53adadf75737c44d3dcb0104fde65250dfc83ad59168b4aa3e574b6a24
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - protobuf >=4.25.8,<8.0.0
+
+tests:
+  - python:
+      imports:
+        - proto
+        - proto.marshal
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Beautiful, Pythonic protocol buffers.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/proto-plus
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/proto-plus
+  documentation: https://proto-plus-python.readthedocs.io/en/latest/
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - tswast
