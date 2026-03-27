@@ -1,5 +1,5 @@
 {% set name = "proto-plus" %}
-{% set version = "1.27.1" %}
+{% set version = "1.27.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 912a7460446625b792f6448bade9e55cd4e41e6ac10e27009ef71a7f317fa147
+  sha256: b2adde53adadf75737c44d3dcb0104fde65250dfc83ad59168b4aa3e574b6a24
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - protobuf >=3.19.0,<7.0.0
+    - protobuf >=4.25.8,<8.0.0
 
 test:
   imports:
