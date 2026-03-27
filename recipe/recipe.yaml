@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: proto-plus
-  version: "1.27.1"
+  version: "1.27.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 912a7460446625b792f6448bade9e55cd4e41e6ac10e27009ef71a7f317fa147
+  sha256: b2adde53adadf75737c44d3dcb0104fde65250dfc83ad59168b4aa3e574b6a24
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -24,27 +24,22 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - protobuf >=3.19.0,<7.0.0
+    - protobuf >=4.25.8,<8.0.0
 
 tests:
   - python:
       imports:
         - proto
         - proto.marshal
+      pip_check: true
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
 
 about:
   summary: Beautiful, Pythonic protocol buffers.
   license: Apache-2.0
   license_file: LICENSE
-  homepage: https://github.com/googleapis/proto-plus-python
-  repository: https://github.com/googleapis/proto-plus-python
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/proto-plus
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/proto-plus
   documentation: https://proto-plus-python.readthedocs.io/en/latest/
 
 extra:
