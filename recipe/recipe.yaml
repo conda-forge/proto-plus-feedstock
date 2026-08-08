@@ -31,7 +31,9 @@ tests:
         - proto
         - proto.marshal
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Beautiful, Pythonic protocol buffers.
