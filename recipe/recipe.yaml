@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: proto-plus
-  version: "1.28.4"
+  version: "1.29.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 5ff7ecad828e032a491fcb86947801768e32237f99dd049b649965b892ae9a63
+  sha256: cfb4e62ad7e13dd18f346cabbda00cab39930d36a05791fd81ddb074d6ee884f
 
 build:
   number: 0
